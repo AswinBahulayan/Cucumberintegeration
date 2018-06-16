@@ -1,5 +1,6 @@
 package stepDefinition;
 import seleniumHelper.SeleniumHelper;
+import _testDataManage._testDataManage;
 import pageObjectModel.PageobjectCRMFREE;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +16,8 @@ public class StepDefinitionLogin extends SeleniumHelper {
 		System.setProperty("webdriver.chrome.driver", "/C:/Users/ASWIN/Desktop/chromedriver_win32/chromedriver.exe");
 		_driver = new ChromeDriver();
 		_driver.manage().window().maximize();
-		_driver.get("https://www.freecrm.com/index.html");
+		String URL=_testDataManage.getDataSheet("ENV", "URL", "Test1", "Environment.xlsx");
+		_driver.get(URL);
 		Thread.sleep(10000);
 		Clickbutton(PageobjectCRMFREE.SignInbutton, "Sign In button");
 		Thread.sleep(5000);
