@@ -13,7 +13,7 @@ public class StepDefinitionLogin extends SeleniumHelper {
 	
 	@Given("^the user is in the home page$")
 	public void login() throws Exception {
-		System.setProperty("webdriver.chrome.driver", "/C:/Users/ASWIN/Desktop/chromedriver_win32/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "src/seleniumAPI/chromedriver.exe");
 		_driver = new ChromeDriver();
 		_driver.manage().window().maximize();
 		String URL=_testDataManage.getDataSheet("ENV", "URL", "Test1", "Environment.xlsx");
