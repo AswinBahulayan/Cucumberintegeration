@@ -1,4 +1,4 @@
-package _testDataManage;
+package _dataProvider;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,8 +9,9 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class _testDataManage {
-	public static String getDataSheetENV(String ColumnName, String RowName) {
+public class _dataProvider {
+	
+	public static String getDataExcelENV(String ColumnName, String RowName) {
 		Cell cell=null;
 		Row row=null;
 		int f=0,g=0,i=0,j=0;
@@ -52,7 +53,7 @@ public class _testDataManage {
 			return z;
 		}
 	
-	public static String getTestData(String ColumnName, String RowName) {
+	public static String getExcelTestData(String ColumnName, String RowName) {
 		Cell cell=null;
 		Row row=null;
 		int f=0,g=0,i=0,j=0;
@@ -94,7 +95,5 @@ public class _testDataManage {
 			return z;
 		}
 	
-	
-
 
 }

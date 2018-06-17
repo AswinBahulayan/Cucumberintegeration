@@ -1,4 +1,4 @@
-package seleniumHelper;
+package _Seleniumutility;
 
 //import java.awt.print.Printable;
 
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 //import pageObjectModel.PageobjectCRMFREE;
 
-public class SeleniumHelper {
+public class _SeleniumUtility {
 	
 	public static WebDriver _driver;
 	public void Entertext(By element, String value)

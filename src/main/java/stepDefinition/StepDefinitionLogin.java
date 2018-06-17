@@ -1,27 +1,27 @@
 package stepDefinition;
-import seleniumHelper.SeleniumHelper;
-import _testDataManage._testDataManage;
+import _Seleniumutility._SeleniumUtility;
+import _dataProvider._dataProvider;
 import pageObjectModel.PageobjectCRMFREE;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+//import org.openqa.selenium.support.ui.Select;
 
 import cucumber.api.java.en.Given;
 
-public class StepDefinitionLogin extends SeleniumHelper {
+public class StepDefinitionLogin extends _SeleniumUtility {
 	
 	@Given("^the user is in the home page$")
 	public void login() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "src/seleniumAPI/chromedriver.exe");
 		_driver = new ChromeDriver();
 		_driver.manage().window().maximize();
-		String URL=_testDataManage.getDataSheetENV("URL", "Test1");
-		String FirstName=_testDataManage.getTestData("Firstname", "TCID001");
-		String LastName=_testDataManage.getTestData("Lastname", "TCID001");
-		String emailID=_testDataManage.getTestData("email_ID", "TCID001");
-		String Username=_testDataManage.getTestData("username", "TCID001");
-		String password=_testDataManage.getTestData("pass", "TCID001");
+		String URL=_dataProvider.getDataExcelENV("URL", "Test1");
+		String FirstName=_dataProvider.getExcelTestData("Firstname", "TCID001");
+		String LastName=_dataProvider.getExcelTestData("Lastname", "TCID001");
+		String emailID=_dataProvider.getExcelTestData("email_ID", "TCID001");
+		String Username=_dataProvider.getExcelTestData("username", "TCID001");
+		String password=_dataProvider.getExcelTestData("pass", "TCID001");
 		_driver.get(URL);
 		Thread.sleep(10000);
 		Clickbutton(PageobjectCRMFREE.SignInbutton, "Sign In button");
